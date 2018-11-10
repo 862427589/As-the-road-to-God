@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            /* 父元素高度由子元素内容撑开，父元素没有设置高度，如果子元素设置浮动，会导致高度塌陷 */
+            width: 300px;
+            border: 5px solid red;
+        }
+        .box{
+            float: left;
+            width: 300px;
+            background: pink;
+        }
+        /* 给父元素添加after伪类(最完美清浮动方案) */
+        .container:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clear">
+        <div class="box">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            /* 如果知道子元素的高度，可以给父元素设置高度（简单粗暴） */
+            height: 100px;
+            width: 300px;
+            border: 5px solid red;
+        }
+
+        .left {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+
+        .right {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+
+</html>
